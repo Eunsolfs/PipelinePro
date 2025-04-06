@@ -1,0 +1,64 @@
+cmake_minimum_required(VERSION 3.15)
+
+# 示例程序：简单的流水线执行
+add_executable(simple_pipeline simple_pipeline.cpp)
+target_link_libraries(simple_pipeline PRIVATE PipelineLib)
+
+# 示例程序：从文件加载流水线
+add_executable(file_pipeline file_pipeline.cpp)
+target_link_libraries(file_pipeline PRIVATE PipelineLib)
+
+# 示例程序：带变量的流水线
+add_executable(variable_pipeline variable_pipeline.cpp)
+target_link_libraries(variable_pipeline PRIVATE PipelineLib)
+
+# 示例程序：暂停和继续流水线
+add_executable(suspend_resume_pipeline suspend_resume_pipeline.cpp)
+target_link_libraries(suspend_resume_pipeline PRIVATE PipelineLib)
+
+# 示例程序：全局变量流水线
+add_executable(global_variable_pipeline global_variable_pipeline.cpp)
+target_link_libraries(global_variable_pipeline PRIVATE PipelineLib)
+
+# 示例程序：StopTask动作流水线
+add_executable(stop_task_pipeline stop_task_pipeline.cpp)
+target_link_libraries(stop_task_pipeline PRIVATE PipelineLib)
+
+# 示例程序：条件处理流水线
+add_executable(condition_process_pipeline condition_process_pipeline.cpp)
+target_link_libraries(condition_process_pipeline PRIVATE PipelineLib)
+
+# 示例程序：识别算法流水线
+add_executable(recognition_example recognition_example.cpp)
+target_link_libraries(recognition_example PRIVATE PipelineLib)
+
+# 示例程序：优化后的识别算法流水线
+add_executable(optimized_recognition_example optimized_recognition_example.cpp)
+target_link_libraries(optimized_recognition_example PRIVATE PipelineLib)
+
+# 示例程序：优化后的动作流水线
+add_executable(optimized_action_example optimized_action_example.cpp)
+target_link_libraries(optimized_action_example PRIVATE PipelineLib)
+
+# 示例程序：结构化动作流水线
+add_executable(structured_action_example structured_action_example.cpp)
+target_link_libraries(structured_action_example PRIVATE PipelineLib)
+
+# 示例程序：完全结构化流水线
+add_executable(fully_structured_example fully_structured_example.cpp)
+target_link_libraries(fully_structured_example PRIVATE PipelineLib)
+
+# 示例程序：带变量的动作流水线
+add_executable(action_with_variables_example action_with_variables_example.cpp)
+target_link_libraries(action_with_variables_example PRIVATE PipelineLib)
+
+# 示例程序：坐标类型变量流水线
+add_executable(coordinate_variables_example coordinate_variables_example.cpp)
+target_link_libraries(coordinate_variables_example PRIVATE PipelineLib)
+
+# 示例程序：批量OCR识别流水线
+add_executable(ocr_batch_example ocr_batch_example.cpp)
+target_link_libraries(ocr_batch_example PRIVATE PipelineLib)
+
+# 安装示例程序
+install(TARGETS simple_pipeline file_pipeline variable_pipeline suspend_resume_pipeline global_variable_pipeline stop_task_pipeline condition_process_pipeline recognition_example optimized_recognition_example optimized_action_example structured_action_example fully_structured_example action_with_variables_example coordinate_variables_example ocr_batch_example DESTINATION bin/examples)

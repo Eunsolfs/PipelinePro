@@ -1,6 +1,20 @@
 # Prerequisites
 *.d
 
+.vs/
+.git/
+.vscode/
+build
+build-x64
+build-x86
+/obj
+/bin
+
+**/Releae
+**/release
+**/Debug
+**/debug
+
 # Compiled Object files
 *.slo
 *.lo
